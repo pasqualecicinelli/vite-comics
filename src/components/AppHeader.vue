@@ -2,7 +2,18 @@
 export default {
   data() {
     return {
-      titleHead: "header",
+      links: [
+        "CHARACTERS",
+        "COMICS",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLLECTIBLES",
+        "VIDEOS",
+        "FANS",
+        "NEWS",
+        "SHOP",
+      ],
     };
   },
 };
@@ -15,16 +26,9 @@ export default {
 
       <navbar>
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><a href="#">10</a></li>
+          <li v-for="(link, index) in links">
+            <a href="#">{{ link }}</a>
+          </li>
         </ul>
       </navbar>
     </div>
@@ -33,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/mixins" as *;
+@use "../style/partials/variables" as *;
 
 header {
   border: 1px solid black;
@@ -41,22 +46,23 @@ header {
 .container-header {
   @include beetwen();
 
-  max-width: 1000px;
+  max-width: 1200px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
 
   img {
-    width: 8%;
+    width: 6%;
   }
 
   ul {
     display: flex;
-    list-style: none;
     li {
       margin: 10px;
       a {
-        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: bold;
+        color:$header-text;
       }
     }
   }

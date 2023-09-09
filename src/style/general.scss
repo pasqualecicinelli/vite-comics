@@ -1,0 +1,15 @@
+@use "../style/partials/variables" as *;
+@use "../style/partials/mixins" as *;
+
+body {
+  height: 200px;
+  border: 1px solid black;
+
+  ul {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
