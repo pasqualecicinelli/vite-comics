@@ -1,13 +1,14 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import AppFooter from "./components/AppFooterTop.vue";
+import AppFooterTop from "./components/AppFooterTop.vue";
+import AppFooterMiddle from "./components/AppFooterMiddle.vue";
 
 export default {
   data() {
     return {};
   },
 
-  components: { AppHeader, AppFooter },
+  components: { AppHeader, AppFooterTop, AppFooterMiddle },
 };
 </script>
 
@@ -17,7 +18,10 @@ export default {
 
   <h1>body center</h1>
 
-  <AppFooter />
+  <AppFooterTop />
+
+  <AppFooterMiddle />
+
 </template>
 
 <style lang="scss">

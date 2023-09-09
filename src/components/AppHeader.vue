@@ -21,16 +21,16 @@ export default {
 
 <template>
   <header>
-    <div class="container-header">
+    <div class="container">
       <img src="img/dc-logo.png" alt="" />
 
-      <navbar>
+      <div class="navbar">
         <ul>
           <li v-for="(link, index) in links">
             <a href="#">{{ link }}</a>
           </li>
         </ul>
-      </navbar>
+      </div>
     </div>
   </header>
 </template>
@@ -43,7 +43,7 @@ header {
   border: 1px solid black;
 }
 
-.container-header {
+.container {
   @include beetwen();
 
   max-width: 1200px;

@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <footer>
+  <div class="container-foot-top">
     <div class="top-footer">
       <ul>
         <li v-for="(link, index) in linksTopFoot">
@@ -50,14 +50,14 @@ export default {
         </li>
       </ul>
     </div>
-  </footer>
+  </div>
 </template>
 
 <style lang="scss" scope>
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-footer {
+.container-foot-top {
 
   @include center();
   height: 150px;
@@ -66,7 +66,7 @@ footer {
 }
 
 .top-footer {
-  max-width: 1200px;
+  width: 1200px;
   
 
   .card-img-top {
