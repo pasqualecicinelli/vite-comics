@@ -39,17 +39,18 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-header {
-  border: 1px solid black;
+header{
+  width: 100%;
+ background-color: $bg-header-text;
 }
 
 .container {
   @include beetwen();
-
-  max-width: 1200px;
+  width: $width-standard;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+ 
 
   img {
     width: 6%;

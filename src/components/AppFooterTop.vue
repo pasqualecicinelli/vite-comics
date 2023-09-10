@@ -58,20 +58,19 @@ export default {
 @use "../style/partials/variables" as *;
 
 .container-foot-top {
-
-  @include center();
+  @include evenly();
   height: 150px;
   background-color: $blu-light;
- 
+  position: relative;
 }
 
 .top-footer {
-  width: 1200px;
-  
+  width: 1100px;
+  position: absolute;
+  z-index: 1;
 
   .card-img-top {
     width: 50px;
-    
 
     img {
       width: 60px;
@@ -88,16 +87,12 @@ export default {
       display: flex;
       width: 100%;
       align-items: center;
-      margin: 0 10px;
-      
-      
     }
 
-    a{
-      margin: 0 20px;
-      color:$bg-header-text;
+    a {
+      margin: 0 15px;
+      color: $bg-header-text;
     }
-   
   }
 }
 </style>

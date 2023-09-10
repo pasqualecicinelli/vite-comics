@@ -86,7 +86,7 @@ export default {
 
   .foot-middle {
     @include beetwen();
-    width: 1200px;
+    width: $width-standard;
     height: 100%;
 
     ul {
@@ -113,7 +113,7 @@ export default {
         }
       }
     }
-
+    
   }
 }
 </style>
