@@ -5,10 +5,14 @@ import AppFooterMiddle from "./components/AppFooterMiddle.vue";
 import AppFooterBottom from "./components/AppFooterBottom.vue";
 import AppCard from "./components/AppCard.vue";
 import AppJumbotron from "./components/AppJumbotron.vue";
+import DCComics from "../src/dc-comics.json"
 
 export default {
+
   data() {
-    return {};
+    return {
+      DCComics
+    };
   },
 
   components: {
@@ -28,7 +32,7 @@ export default {
   </header>
   <AppJumbotron />
 
-  <AppCard />
+  <AppCard :comics="DCComics" />
 
   <footer>
     <AppFooterTop />
