@@ -53,7 +53,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
@@ -65,12 +65,12 @@ export default {
 }
 
 .top-footer {
-  width: 1100px;
+  width: 1150px;
   position: absolute;
   z-index: 1;
 
   .card-img-top {
-    width: 50px;
+    width: 60px;
 
     img {
       width: 60px;
@@ -82,15 +82,18 @@ export default {
   ul {
     display: flex;
     width: 100%;
+    padding: 0;
+    gap: 2rem;
 
     li {
       display: flex;
       width: 100%;
       align-items: center;
+      gap: 0.5rem;
     }
 
     a {
-      margin: 0 15px;
+      font-size: 0.75rem;
       color: $bg-header-text;
     }
   }

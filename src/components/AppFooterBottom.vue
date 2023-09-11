@@ -39,7 +39,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
@@ -60,6 +60,7 @@ export default {
       padding: 1rem;
       border: 1px solid $blu-light;
       color: $bg-header-text;
+      cursor: pointer;
     }
 
     .container-icons {

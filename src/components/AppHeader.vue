@@ -14,7 +14,15 @@ export default {
         "NEWS",
         "SHOP",
       ],
+
+      activeLink: 0,
     };
+  },
+
+  methods: {
+    clickLink(index) {
+      this.activeLink = index;
+    },
   },
 };
 </script>
@@ -24,13 +32,19 @@ export default {
     <div class="container">
       <img src="img/dc-logo.png" alt="" />
 
-      <div class="navbar">
+      <nav>
         <ul>
           <li v-for="(link, index) in links">
-            <a href="#">{{ link }}</a>
+            <a
+              class="navLinks"
+              :class="index == activeLink ? 'active' : ''"
+              @click="clickLink(index)"
+              href="#"
+              >{{ link }}</a
+            >
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 </template>
@@ -39,9 +53,9 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-header{
+header {
   width: 100%;
- background-color: $bg-header-text;
+  background-color: $bg-header-text;
 }
 
 .container {
@@ -50,10 +64,9 @@ header{
   height: 100px;
   margin-left: auto;
   margin-right: auto;
- 
 
   img {
-    width: 6%;
+    width: 70px;
   }
 
   ul {
@@ -63,7 +76,11 @@ header{
       a {
         font-size: 0.75rem;
         font-weight: bold;
-        color:$header-text;
+        color: $header-text;
+      }
+      .navLinks.active {
+        color: $blu-light;
+        //aggiungere hover
       }
     }
   }
