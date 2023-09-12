@@ -1,10 +1,8 @@
 <script>
 export default {
-
   props: {
-    comics:Array,
-  }
-  
+    comics: Array,
+  },
 };
 </script>
 
@@ -35,9 +33,9 @@ main {
   .container-card {
     @include evenly();
     flex-wrap: wrap;
-    margin: 3rem 0;
+    margin: 3rem 0 1.5rem 0;
     width: $width-standard;
-    height: 500px;
+    height: 600px;
     position: relative;
     .button-blu {
       padding: 1rem;
@@ -48,16 +46,17 @@ main {
       position: absolute;
       z-index: 1;
       top: -70px;
-      left: 15px;
+      left: 0;
     }
 
     .card {
       width: 180px;
-      height: 220px;
+      height: 250px;
 
       img {
-        width: 180px;
-        aspect-ratio: 1;
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
       }
       span {
         font-size: 0.75rem;
@@ -69,7 +68,7 @@ main {
 
     .button-blu-bottom {
       padding: 0.8rem 3.5rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
       background-color: $blu-light;
       color: $bg-header-text;
       font-size: 0.8rem;
